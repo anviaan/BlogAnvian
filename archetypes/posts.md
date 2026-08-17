@@ -1,6 +1,6 @@
 ---
 title: "{{ replace .File.ContentBaseName \"-\" \" \" | title }}"
-date: {{ .Date }}
+date: YYYY-MM-DD
 draft: true
 author: "anvian"
 description: ""
