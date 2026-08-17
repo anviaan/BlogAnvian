@@ -1,0 +1,62 @@
+/* Keep the header from creating a nested scrollbar when the theme toggle's
+   tooltip extends beyond the fixed header height. */
+.AppHeader {
+  overflow: hidden;
+}
+
+/* Mobile header: keep the brand and theme control on one row, then give
+   navigation its own full-width row so links never compete for space. */
+@media (max-width: 543px) {
+  .AppHeader .tooltipped::before,
+  .AppHeader .tooltipped::after {
+    display: none;
+  }
+
+  .AppHeader-globalBar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px 12px;
+    padding: 10px 12px 8px;
+  }
+
+  .AppHeader-globalBar-start {
+    display: contents;
+  }
+
+  .AppHeader-logo {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+  }
+
+  .AppHeader-logo-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .AppHeader-globalBar-end {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .AppHeader-nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 4px;
+    width: 100%;
+    overflow: visible;
+  }
+
+  .AppHeader-nav-item {
+    justify-content: center;
+    min-width: 0;
+    padding: 7px 3px;
+    font-size: 12px;
+    line-height: 1.25;
+    text-align: center;
+    white-space: normal;
+  }
+}

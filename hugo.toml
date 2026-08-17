@@ -1,0 +1,83 @@
+baseURL = "https://blog.anvian.net/"
+title = "Anvian's Blog"
+locale = "en-US"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+
+[module]
+  [[module.imports]]
+    path = "go.ngs.io/hugo-primer-blog"
+    version = "v1.0.10"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[params]
+  author = "anvian"
+  authorAvatar = "https://avatars.githubusercontent.com/u/83990285?v=4"
+  authorRole = "Developer & Gamer"
+  authorBio = "I write about development, mods, tools, games, programming languages, and whatever catches my attention."
+  description = "Development, mods, tools, games, programming languages, and more."
+  dateFormat = "2006-01-02"
+  defaultTheme = "auto"
+  sidebar = true
+  recentPostsCount = 5
+  showReadingTime = true
+  showShareButtons = true
+
+  [params.social]
+    modrinth = "https://modrinth.com/user/anvian"
+    curseforge = "https://www.curseforge.com/members/anvian/projects"
+    github = "anviaan"
+    x = "carbajal_andre"
+
+  [[params.sidebarModules]]
+    partial = "aboutme"
+
+  [[params.sidebarModules]]
+    partial = "social"
+
+  [[params.sidebarModules]]
+    partial = "recentPosts"
+
+  [[params.sidebarModules]]
+    partial = "tags"
+
+  [[params.sidebarModules]]
+    partial = "categories"
+
+  [[params.sidebarModules]]
+    partial = "archive"
+
+[menus]
+  [[menus.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menus.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+
+  [[menus.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
+
+  [[menus.main]]
+    name = "Categories"
+    url = "/categories/"
+    weight = 4
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    noClasses = false
+    style = "github"
+
+[pagination]
+  pagerSize = 10

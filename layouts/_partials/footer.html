@@ -1,0 +1,18 @@
+<footer class="color-bg-subtle border-top py-4 mt-6">
+  <div class="container-xl px-3 px-md-4 px-lg-5">
+    <nav class="d-flex flex-wrap flex-justify-center mb-3" aria-label="Footer navigation">
+      {{- range site.Menus.main -}}
+      <a href="{{ .URL | relLangURL }}" class="Link--secondary px-2">{{ .Name }}</a>
+      {{- end -}}
+    </nav>
+
+    <p class="color-fg-muted f6 text-center mb-0">
+      &copy; {{ now.Year }} Anvian. All rights reserved.
+    </p>
+
+    <p class="color-fg-muted f6 text-center mb-0 mt-2">
+      Powered by
+      <a href="https://gohugo.io/" class="Link--secondary">Hugo</a>
+    </p>
+  </div>
+</footer>

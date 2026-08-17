@@ -1,0 +1,21 @@
+<section class="color-bg-subtle rounded-2 p-3 mb-3" aria-labelledby="sidebar-about-title">
+  <h3 id="sidebar-about-title" class="h5 mb-2">About Me</h3>
+
+  <div class="d-flex flex-items-center mb-2">
+    <img
+      src='{{ site.Params.authorAvatar | default "https://github.com/github.png" }}'
+      alt='{{ site.Params.author | default "Anvian" }} avatar'
+      class="avatar avatar-6 mr-2"
+      width="48"
+      height="48"
+    >
+    <div>
+      <strong class="d-block">{{ site.Params.author | default "Anvian" }}</strong>
+      <span class="f6 color-fg-muted">{{ site.Params.authorRole | default "Developer & Blogger" }}</span>
+    </div>
+  </div>
+
+  <p class="f6 color-fg-muted mb-0">
+    {{ site.Params.authorBio | default "I write about modding, self-hosting, and building things with code." }}
+  </p>
+</section>

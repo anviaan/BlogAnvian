@@ -1,0 +1,11 @@
+.git
+.gitmodules
+.dockerignore
+.gitignore
+public/
+resources/
+.hugo_build.lock
+.hugo/
+hugo_cache/
+node_modules/
+*.log

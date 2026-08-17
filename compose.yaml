@@ -1,0 +1,25 @@
+name: blog-anvian
+
+services:
+  hugo:
+    image: ghcr.io/gohugoio/hugo:v0.165.0
+    user: "0:0"
+    working_dir: /src
+    command:
+      - server
+      - --bind=0.0.0.0
+      - --port=1313
+      - --baseURL=http://localhost:1313/
+      - --buildDrafts
+      - --navigateToChanged
+      - --poll=700ms
+    ports:
+      - "127.0.0.1:1313:1313"
+    volumes:
+      - .:/src
+      - hugo-cache:/tmp/hugo_cache
+    environment:
+      HUGO_CACHEDIR: /tmp/hugo_cache
+
+volumes:
+  hugo-cache:
