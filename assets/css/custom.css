@@ -4,6 +4,48 @@
   overflow: hidden;
 }
 
+.post-resource-list {
+  display: grid;
+  gap: 8px;
+}
+
+.post-resource {
+  display: block;
+  padding: 10px;
+  color: var(--fgColor-default, var(--color-fg-default));
+  border: 1px solid var(--borderColor-default, var(--color-border-default));
+  border-radius: 6px;
+  text-decoration: none;
+  transition: border-color 120ms ease, background-color 120ms ease;
+}
+
+.post-resource:hover {
+  background-color: var(--bgColor-muted, var(--color-canvas-subtle));
+  border-color: var(--borderColor-accent-emphasis, var(--color-accent-emphasis));
+  text-decoration: none;
+}
+
+.post-resource-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mermaid {
+  overflow-x: auto;
+  padding: 1rem;
+  background-color: var(--bgColor-muted, var(--color-canvas-subtle));
+  border: 1px solid var(--borderColor-default, var(--color-border-default));
+  border-radius: 6px;
+  text-align: center;
+}
+
+.mermaid svg {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
 /* Mobile header: keep the brand and theme control on one row, then give
    navigation its own full-width row so links never compete for space. */
 @media (max-width: 543px) {

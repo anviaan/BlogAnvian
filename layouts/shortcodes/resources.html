@@ -1,0 +1,18 @@
+{{ with .Page.Params.resources }}
+<section class="post-resources color-bg-subtle rounded-2 p-3 mb-4" aria-labelledby="post-resources-title">
+  <h2 id="post-resources-title" class="h4 mb-3">Resources</h2>
+
+  <div class="post-resource-list">
+    {{ range . }}
+    <a class="post-resource" href="{{ .url }}" rel="external noopener" target="_blank">
+      <div class="d-flex flex-items-center flex-justify-between mb-1">
+        <strong class="post-resource-name">{{ .name }}</strong>
+        <span class="Label Label--secondary">{{ .platform }}</span>
+      </div>
+      <p class="f6 color-fg-muted mb-1">{{ .description }}</p>
+      <span class="f7 color-fg-muted">{{ .owner }} · View repository</span>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
